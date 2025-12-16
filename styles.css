@@ -1,0 +1,37 @@
+:root{
+  --bg1:#0f172a; /* deep */
+  --bg2:#072c4f; /* blue */
+  --accent:#ffb74d;
+  --card:#ffffff22;
+  --text:#fff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,system-ui,-apple-system;min-height:100vh;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text);}
+.site-header{padding:12px 18px}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.nav .logo{font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links a{color:var(--text);margin-left:12px;text-decoration:none;opacity:.95}
+
+.hero{padding:64px 20px;text-align:center;position:relative;overflow:hidden}
+.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,#ffffff10, transparent 10%), radial-gradient(circle at 80% 80%, #ffffff05, transparent 15%);mix-blend-mode:screen;pointer-events:none}
+.hero-title{font-size:2.6rem;margin:0 0 12px}
+.hero-sub{max-width:680px;margin:0 auto 18px;color:#f0f4f8}
+.hero-actions{margin-top:18px}
+.btn{display:inline-block;background:var(--accent);color:#000;padding:10px 16px;border-radius:10px;margin:6px;text-decoration:none;font-weight:700}
+
+.container{padding:28px 18px;max-width:900px;margin:0 auto;background:var(--card);border-radius:12px;margin-top:24px}
+h2{margin-top:0}
+.timeline ul,.fancy-list,.good-list{padding-left:18px}
+.fancy-list{list-style:none;padding:0}
+.fancy-list li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #ffffff15}
+.ico{width:28px;height:28px}
+.portrait{display:flex;align-items:center;gap:12px;margin-top:16px}
+.portrait svg{border-radius:8px}
+
+.site-footer{padding:18px;text-align:center;color:#ddd}
+
+/* simple snow using animated linear-gradients */
+.hero:after{content:'';position:absolute;inset:0;background-image:radial-gradient(#fff5 1px, transparent 1px);background-size:30px 30px;opacity:.12;animation:snow 12s linear infinite}
+@keyframes snow{from{background-position:0 0}to{background-position:0 600px}}
+
+@media(min-width:720px){.hero-title{font-size:3.4rem}}
